@@ -1,4 +1,4 @@
-package ru.gb.homeworks.homework_05;
+package homeworks.homework_05;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import org.apache.http.HttpResponse;
