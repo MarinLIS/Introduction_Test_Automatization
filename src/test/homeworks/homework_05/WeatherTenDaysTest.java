@@ -1,4 +1,4 @@
-package ru.gb.homeworks.homework_05;
+package homeworks.homework_05;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
