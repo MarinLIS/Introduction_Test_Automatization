@@ -1,0 +1,1942 @@
+{
+	"info": {
+		"_postman_id": "f944b792-4cbd-4ab6-b080-c9679240fa5c",
+		"name": "home_lesson3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7302749"
+	},
+	"item": [
+		{
+			"name": "Classify Cuisine",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test('Count object = ' + pm.response.json().cuisines.length, function () {\r",
+							"    pm.expect(pm.response.json().cuisines.length).to.equal(3);\r",
+							"});\r",
+							"pm.test(\"test cuisine\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cuisine).to.eql(\"Mediterranean\");\r",
+							"});\r",
+							"pm.test(\"test confidence\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.confidence).to.eql(0.0);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "0",
+							"value": "t222",
+							"disabled": true
+						},
+						{
+							"key": "1",
+							"value": "i",
+							"disabled": true
+						},
+						{
+							"key": "2",
+							"value": "t",
+							"disabled": true
+						},
+						{
+							"key": "3",
+							"value": "l",
+							"disabled": true
+						},
+						{
+							"key": "4",
+							"value": "e",
+							"disabled": true
+						},
+						{
+							"key": "5",
+							"value": "=",
+							"disabled": true
+						},
+						{
+							"key": "6",
+							"value": "P",
+							"disabled": true
+						},
+						{
+							"key": "7",
+							"value": "o",
+							"disabled": true
+						},
+						{
+							"key": "8",
+							"value": "r",
+							"disabled": true
+						},
+						{
+							"key": "9",
+							"value": "k",
+							"disabled": true
+						},
+						{
+							"key": "10",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "11",
+							"value": "r",
+							"disabled": true
+						},
+						{
+							"key": "12",
+							"value": "o",
+							"disabled": true
+						},
+						{
+							"key": "13",
+							"value": "a",
+							"disabled": true
+						},
+						{
+							"key": "14",
+							"value": "s",
+							"disabled": true
+						},
+						{
+							"key": "15",
+							"value": "t",
+							"disabled": true
+						},
+						{
+							"key": "16",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "17",
+							"value": "w",
+							"disabled": true
+						},
+						{
+							"key": "18",
+							"value": "i",
+							"disabled": true
+						},
+						{
+							"key": "19",
+							"value": "t",
+							"disabled": true
+						},
+						{
+							"key": "20",
+							"value": "h",
+							"disabled": true
+						},
+						{
+							"key": "21",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "22",
+							"value": "g",
+							"disabled": true
+						},
+						{
+							"key": "23",
+							"value": "r",
+							"disabled": true
+						},
+						{
+							"key": "24",
+							"value": "e",
+							"disabled": true
+						},
+						{
+							"key": "25",
+							"value": "e",
+							"disabled": true
+						},
+						{
+							"key": "26",
+							"value": "n",
+							"disabled": true
+						},
+						{
+							"key": "27",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "28",
+							"value": "b",
+							"disabled": true
+						},
+						{
+							"key": "29",
+							"value": "e",
+							"disabled": true
+						},
+						{
+							"key": "30",
+							"value": "a",
+							"disabled": true
+						},
+						{
+							"key": "31",
+							"value": "n",
+							"disabled": true
+						},
+						{
+							"key": "32",
+							"value": "s",
+							"disabled": true
+						},
+						{
+							"key": "33",
+							"value": "&",
+							"disabled": true
+						},
+						{
+							"key": "34",
+							"value": "i",
+							"disabled": true
+						},
+						{
+							"key": "35",
+							"value": "n",
+							"disabled": true
+						},
+						{
+							"key": "36",
+							"value": "g",
+							"disabled": true
+						},
+						{
+							"key": "37",
+							"value": "r",
+							"disabled": true
+						},
+						{
+							"key": "38",
+							"value": "e",
+							"disabled": true
+						},
+						{
+							"key": "39",
+							"value": "d",
+							"disabled": true
+						},
+						{
+							"key": "40",
+							"value": "i",
+							"disabled": true
+						},
+						{
+							"key": "41",
+							"value": "e",
+							"disabled": true
+						},
+						{
+							"key": "42",
+							"value": "n",
+							"disabled": true
+						},
+						{
+							"key": "43",
+							"value": "t",
+							"disabled": true
+						},
+						{
+							"key": "44",
+							"value": "L",
+							"disabled": true
+						},
+						{
+							"key": "45",
+							"value": "i",
+							"disabled": true
+						},
+						{
+							"key": "46",
+							"value": "s",
+							"disabled": true
+						},
+						{
+							"key": "47",
+							"value": "t",
+							"disabled": true
+						},
+						{
+							"key": "48",
+							"value": "=",
+							"disabled": true
+						},
+						{
+							"key": "49",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "50",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "51",
+							"value": "o",
+							"disabled": true
+						},
+						{
+							"key": "52",
+							"value": "z",
+							"disabled": true
+						},
+						{
+							"key": "53",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "54",
+							"value": "p",
+							"disabled": true
+						},
+						{
+							"key": "55",
+							"value": "o",
+							"disabled": true
+						},
+						{
+							"key": "56",
+							"value": "r",
+							"disabled": true
+						},
+						{
+							"key": "57",
+							"value": "k",
+							"disabled": true
+						},
+						{
+							"key": "58",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "59",
+							"value": "s",
+							"disabled": true
+						},
+						{
+							"key": "60",
+							"value": "h",
+							"disabled": true
+						},
+						{
+							"key": "61",
+							"value": "o",
+							"disabled": true
+						},
+						{
+							"key": "62",
+							"value": "u",
+							"disabled": true
+						},
+						{
+							"key": "63",
+							"value": "l",
+							"disabled": true
+						},
+						{
+							"key": "64",
+							"value": "d",
+							"disabled": true
+						},
+						{
+							"key": "65",
+							"value": "e",
+							"disabled": true
+						},
+						{
+							"key": "66",
+							"value": "r",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Pork roast with green beans",
+							"type": "text"
+						},
+						{
+							"key": "ingredientList",
+							"value": "3 oz pork shoulder",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "en",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/recipes/cuisine",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"recipes",
+						"cuisine"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "123123",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Classify the recipe's cuisine."
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "The content type.",
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "0",
+									"value": "t"
+								},
+								{
+									"key": "1",
+									"value": "i"
+								},
+								{
+									"key": "2",
+									"value": "t"
+								},
+								{
+									"key": "3",
+									"value": "l"
+								},
+								{
+									"key": "4",
+									"value": "e"
+								},
+								{
+									"key": "5",
+									"value": "="
+								},
+								{
+									"key": "6",
+									"value": "P"
+								},
+								{
+									"key": "7",
+									"value": "o"
+								},
+								{
+									"key": "8",
+									"value": "r"
+								},
+								{
+									"key": "9",
+									"value": "k"
+								},
+								{
+									"key": "10",
+									"value": " "
+								},
+								{
+									"key": "11",
+									"value": "r"
+								},
+								{
+									"key": "12",
+									"value": "o"
+								},
+								{
+									"key": "13",
+									"value": "a"
+								},
+								{
+									"key": "14",
+									"value": "s"
+								},
+								{
+									"key": "15",
+									"value": "t"
+								},
+								{
+									"key": "16",
+									"value": " "
+								},
+								{
+									"key": "17",
+									"value": "w"
+								},
+								{
+									"key": "18",
+									"value": "i"
+								},
+								{
+									"key": "19",
+									"value": "t"
+								},
+								{
+									"key": "20",
+									"value": "h"
+								},
+								{
+									"key": "21",
+									"value": " "
+								},
+								{
+									"key": "22",
+									"value": "g"
+								},
+								{
+									"key": "23",
+									"value": "r"
+								},
+								{
+									"key": "24",
+									"value": "e"
+								},
+								{
+									"key": "25",
+									"value": "e"
+								},
+								{
+									"key": "26",
+									"value": "n"
+								},
+								{
+									"key": "27",
+									"value": " "
+								},
+								{
+									"key": "28",
+									"value": "b"
+								},
+								{
+									"key": "29",
+									"value": "e"
+								},
+								{
+									"key": "30",
+									"value": "a"
+								},
+								{
+									"key": "31",
+									"value": "n"
+								},
+								{
+									"key": "32",
+									"value": "s"
+								},
+								{
+									"key": "33",
+									"value": "&"
+								},
+								{
+									"key": "34",
+									"value": "i"
+								},
+								{
+									"key": "35",
+									"value": "n"
+								},
+								{
+									"key": "36",
+									"value": "g"
+								},
+								{
+									"key": "37",
+									"value": "r"
+								},
+								{
+									"key": "38",
+									"value": "e"
+								},
+								{
+									"key": "39",
+									"value": "d"
+								},
+								{
+									"key": "40",
+									"value": "i"
+								},
+								{
+									"key": "41",
+									"value": "e"
+								},
+								{
+									"key": "42",
+									"value": "n"
+								},
+								{
+									"key": "43",
+									"value": "t"
+								},
+								{
+									"key": "44",
+									"value": "L"
+								},
+								{
+									"key": "45",
+									"value": "i"
+								},
+								{
+									"key": "46",
+									"value": "s"
+								},
+								{
+									"key": "47",
+									"value": "t"
+								},
+								{
+									"key": "48",
+									"value": "="
+								},
+								{
+									"key": "49",
+									"value": "3"
+								},
+								{
+									"key": "50",
+									"value": " "
+								},
+								{
+									"key": "51",
+									"value": "o"
+								},
+								{
+									"key": "52",
+									"value": "z"
+								},
+								{
+									"key": "53",
+									"value": " "
+								},
+								{
+									"key": "54",
+									"value": "p"
+								},
+								{
+									"key": "55",
+									"value": "o"
+								},
+								{
+									"key": "56",
+									"value": "r"
+								},
+								{
+									"key": "57",
+									"value": "k"
+								},
+								{
+									"key": "58",
+									"value": " "
+								},
+								{
+									"key": "59",
+									"value": "s"
+								},
+								{
+									"key": "60",
+									"value": "h"
+								},
+								{
+									"key": "61",
+									"value": "o"
+								},
+								{
+									"key": "62",
+									"value": "u"
+								},
+								{
+									"key": "63",
+									"value": "l"
+								},
+								{
+									"key": "64",
+									"value": "d"
+								},
+								{
+									"key": "65",
+									"value": "e"
+								},
+								{
+									"key": "66",
+									"value": "r"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/recipes/cuisine?apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recipes",
+								"cuisine"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"cuisine\": \"Mediterranean\",\n \"cuisines\": [\n  \"Mediterranean\",\n  \"European\",\n  \"Italian\"\n ],\n \"confidence\": 0\n}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "The content type.",
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "0",
+									"value": "t"
+								},
+								{
+									"key": "1",
+									"value": "i"
+								},
+								{
+									"key": "2",
+									"value": "t"
+								},
+								{
+									"key": "3",
+									"value": "l"
+								},
+								{
+									"key": "4",
+									"value": "e"
+								},
+								{
+									"key": "5",
+									"value": "="
+								},
+								{
+									"key": "6",
+									"value": "P"
+								},
+								{
+									"key": "7",
+									"value": "o"
+								},
+								{
+									"key": "8",
+									"value": "r"
+								},
+								{
+									"key": "9",
+									"value": "k"
+								},
+								{
+									"key": "10",
+									"value": " "
+								},
+								{
+									"key": "11",
+									"value": "r"
+								},
+								{
+									"key": "12",
+									"value": "o"
+								},
+								{
+									"key": "13",
+									"value": "a"
+								},
+								{
+									"key": "14",
+									"value": "s"
+								},
+								{
+									"key": "15",
+									"value": "t"
+								},
+								{
+									"key": "16",
+									"value": " "
+								},
+								{
+									"key": "17",
+									"value": "w"
+								},
+								{
+									"key": "18",
+									"value": "i"
+								},
+								{
+									"key": "19",
+									"value": "t"
+								},
+								{
+									"key": "20",
+									"value": "h"
+								},
+								{
+									"key": "21",
+									"value": " "
+								},
+								{
+									"key": "22",
+									"value": "g"
+								},
+								{
+									"key": "23",
+									"value": "r"
+								},
+								{
+									"key": "24",
+									"value": "e"
+								},
+								{
+									"key": "25",
+									"value": "e"
+								},
+								{
+									"key": "26",
+									"value": "n"
+								},
+								{
+									"key": "27",
+									"value": " "
+								},
+								{
+									"key": "28",
+									"value": "b"
+								},
+								{
+									"key": "29",
+									"value": "e"
+								},
+								{
+									"key": "30",
+									"value": "a"
+								},
+								{
+									"key": "31",
+									"value": "n"
+								},
+								{
+									"key": "32",
+									"value": "s"
+								},
+								{
+									"key": "33",
+									"value": "&"
+								},
+								{
+									"key": "34",
+									"value": "i"
+								},
+								{
+									"key": "35",
+									"value": "n"
+								},
+								{
+									"key": "36",
+									"value": "g"
+								},
+								{
+									"key": "37",
+									"value": "r"
+								},
+								{
+									"key": "38",
+									"value": "e"
+								},
+								{
+									"key": "39",
+									"value": "d"
+								},
+								{
+									"key": "40",
+									"value": "i"
+								},
+								{
+									"key": "41",
+									"value": "e"
+								},
+								{
+									"key": "42",
+									"value": "n"
+								},
+								{
+									"key": "43",
+									"value": "t"
+								},
+								{
+									"key": "44",
+									"value": "L"
+								},
+								{
+									"key": "45",
+									"value": "i"
+								},
+								{
+									"key": "46",
+									"value": "s"
+								},
+								{
+									"key": "47",
+									"value": "t"
+								},
+								{
+									"key": "48",
+									"value": "="
+								},
+								{
+									"key": "49",
+									"value": "3"
+								},
+								{
+									"key": "50",
+									"value": " "
+								},
+								{
+									"key": "51",
+									"value": "o"
+								},
+								{
+									"key": "52",
+									"value": "z"
+								},
+								{
+									"key": "53",
+									"value": " "
+								},
+								{
+									"key": "54",
+									"value": "p"
+								},
+								{
+									"key": "55",
+									"value": "o"
+								},
+								{
+									"key": "56",
+									"value": "r"
+								},
+								{
+									"key": "57",
+									"value": "k"
+								},
+								{
+									"key": "58",
+									"value": " "
+								},
+								{
+									"key": "59",
+									"value": "s"
+								},
+								{
+									"key": "60",
+									"value": "h"
+								},
+								{
+									"key": "61",
+									"value": "o"
+								},
+								{
+									"key": "62",
+									"value": "u"
+								},
+								{
+									"key": "63",
+									"value": "l"
+								},
+								{
+									"key": "64",
+									"value": "d"
+								},
+								{
+									"key": "65",
+									"value": "e"
+								},
+								{
+									"key": "66",
+									"value": "r"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/recipes/cuisine?apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recipes",
+								"cuisine"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "The content type.",
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "0",
+									"value": "t"
+								},
+								{
+									"key": "1",
+									"value": "i"
+								},
+								{
+									"key": "2",
+									"value": "t"
+								},
+								{
+									"key": "3",
+									"value": "l"
+								},
+								{
+									"key": "4",
+									"value": "e"
+								},
+								{
+									"key": "5",
+									"value": "="
+								},
+								{
+									"key": "6",
+									"value": "P"
+								},
+								{
+									"key": "7",
+									"value": "o"
+								},
+								{
+									"key": "8",
+									"value": "r"
+								},
+								{
+									"key": "9",
+									"value": "k"
+								},
+								{
+									"key": "10",
+									"value": " "
+								},
+								{
+									"key": "11",
+									"value": "r"
+								},
+								{
+									"key": "12",
+									"value": "o"
+								},
+								{
+									"key": "13",
+									"value": "a"
+								},
+								{
+									"key": "14",
+									"value": "s"
+								},
+								{
+									"key": "15",
+									"value": "t"
+								},
+								{
+									"key": "16",
+									"value": " "
+								},
+								{
+									"key": "17",
+									"value": "w"
+								},
+								{
+									"key": "18",
+									"value": "i"
+								},
+								{
+									"key": "19",
+									"value": "t"
+								},
+								{
+									"key": "20",
+									"value": "h"
+								},
+								{
+									"key": "21",
+									"value": " "
+								},
+								{
+									"key": "22",
+									"value": "g"
+								},
+								{
+									"key": "23",
+									"value": "r"
+								},
+								{
+									"key": "24",
+									"value": "e"
+								},
+								{
+									"key": "25",
+									"value": "e"
+								},
+								{
+									"key": "26",
+									"value": "n"
+								},
+								{
+									"key": "27",
+									"value": " "
+								},
+								{
+									"key": "28",
+									"value": "b"
+								},
+								{
+									"key": "29",
+									"value": "e"
+								},
+								{
+									"key": "30",
+									"value": "a"
+								},
+								{
+									"key": "31",
+									"value": "n"
+								},
+								{
+									"key": "32",
+									"value": "s"
+								},
+								{
+									"key": "33",
+									"value": "&"
+								},
+								{
+									"key": "34",
+									"value": "i"
+								},
+								{
+									"key": "35",
+									"value": "n"
+								},
+								{
+									"key": "36",
+									"value": "g"
+								},
+								{
+									"key": "37",
+									"value": "r"
+								},
+								{
+									"key": "38",
+									"value": "e"
+								},
+								{
+									"key": "39",
+									"value": "d"
+								},
+								{
+									"key": "40",
+									"value": "i"
+								},
+								{
+									"key": "41",
+									"value": "e"
+								},
+								{
+									"key": "42",
+									"value": "n"
+								},
+								{
+									"key": "43",
+									"value": "t"
+								},
+								{
+									"key": "44",
+									"value": "L"
+								},
+								{
+									"key": "45",
+									"value": "i"
+								},
+								{
+									"key": "46",
+									"value": "s"
+								},
+								{
+									"key": "47",
+									"value": "t"
+								},
+								{
+									"key": "48",
+									"value": "="
+								},
+								{
+									"key": "49",
+									"value": "3"
+								},
+								{
+									"key": "50",
+									"value": " "
+								},
+								{
+									"key": "51",
+									"value": "o"
+								},
+								{
+									"key": "52",
+									"value": "z"
+								},
+								{
+									"key": "53",
+									"value": " "
+								},
+								{
+									"key": "54",
+									"value": "p"
+								},
+								{
+									"key": "55",
+									"value": "o"
+								},
+								{
+									"key": "56",
+									"value": "r"
+								},
+								{
+									"key": "57",
+									"value": "k"
+								},
+								{
+									"key": "58",
+									"value": " "
+								},
+								{
+									"key": "59",
+									"value": "s"
+								},
+								{
+									"key": "60",
+									"value": "h"
+								},
+								{
+									"key": "61",
+									"value": "o"
+								},
+								{
+									"key": "62",
+									"value": "u"
+								},
+								{
+									"key": "63",
+									"value": "l"
+								},
+								{
+									"key": "64",
+									"value": "d"
+								},
+								{
+									"key": "65",
+									"value": "e"
+								},
+								{
+									"key": "66",
+									"value": "r"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/recipes/cuisine?apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recipes",
+								"cuisine"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "The content type.",
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "0",
+									"value": "t"
+								},
+								{
+									"key": "1",
+									"value": "i"
+								},
+								{
+									"key": "2",
+									"value": "t"
+								},
+								{
+									"key": "3",
+									"value": "l"
+								},
+								{
+									"key": "4",
+									"value": "e"
+								},
+								{
+									"key": "5",
+									"value": "="
+								},
+								{
+									"key": "6",
+									"value": "P"
+								},
+								{
+									"key": "7",
+									"value": "o"
+								},
+								{
+									"key": "8",
+									"value": "r"
+								},
+								{
+									"key": "9",
+									"value": "k"
+								},
+								{
+									"key": "10",
+									"value": " "
+								},
+								{
+									"key": "11",
+									"value": "r"
+								},
+								{
+									"key": "12",
+									"value": "o"
+								},
+								{
+									"key": "13",
+									"value": "a"
+								},
+								{
+									"key": "14",
+									"value": "s"
+								},
+								{
+									"key": "15",
+									"value": "t"
+								},
+								{
+									"key": "16",
+									"value": " "
+								},
+								{
+									"key": "17",
+									"value": "w"
+								},
+								{
+									"key": "18",
+									"value": "i"
+								},
+								{
+									"key": "19",
+									"value": "t"
+								},
+								{
+									"key": "20",
+									"value": "h"
+								},
+								{
+									"key": "21",
+									"value": " "
+								},
+								{
+									"key": "22",
+									"value": "g"
+								},
+								{
+									"key": "23",
+									"value": "r"
+								},
+								{
+									"key": "24",
+									"value": "e"
+								},
+								{
+									"key": "25",
+									"value": "e"
+								},
+								{
+									"key": "26",
+									"value": "n"
+								},
+								{
+									"key": "27",
+									"value": " "
+								},
+								{
+									"key": "28",
+									"value": "b"
+								},
+								{
+									"key": "29",
+									"value": "e"
+								},
+								{
+									"key": "30",
+									"value": "a"
+								},
+								{
+									"key": "31",
+									"value": "n"
+								},
+								{
+									"key": "32",
+									"value": "s"
+								},
+								{
+									"key": "33",
+									"value": "&"
+								},
+								{
+									"key": "34",
+									"value": "i"
+								},
+								{
+									"key": "35",
+									"value": "n"
+								},
+								{
+									"key": "36",
+									"value": "g"
+								},
+								{
+									"key": "37",
+									"value": "r"
+								},
+								{
+									"key": "38",
+									"value": "e"
+								},
+								{
+									"key": "39",
+									"value": "d"
+								},
+								{
+									"key": "40",
+									"value": "i"
+								},
+								{
+									"key": "41",
+									"value": "e"
+								},
+								{
+									"key": "42",
+									"value": "n"
+								},
+								{
+									"key": "43",
+									"value": "t"
+								},
+								{
+									"key": "44",
+									"value": "L"
+								},
+								{
+									"key": "45",
+									"value": "i"
+								},
+								{
+									"key": "46",
+									"value": "s"
+								},
+								{
+									"key": "47",
+									"value": "t"
+								},
+								{
+									"key": "48",
+									"value": "="
+								},
+								{
+									"key": "49",
+									"value": "3"
+								},
+								{
+									"key": "50",
+									"value": " "
+								},
+								{
+									"key": "51",
+									"value": "o"
+								},
+								{
+									"key": "52",
+									"value": "z"
+								},
+								{
+									"key": "53",
+									"value": " "
+								},
+								{
+									"key": "54",
+									"value": "p"
+								},
+								{
+									"key": "55",
+									"value": "o"
+								},
+								{
+									"key": "56",
+									"value": "r"
+								},
+								{
+									"key": "57",
+									"value": "k"
+								},
+								{
+									"key": "58",
+									"value": " "
+								},
+								{
+									"key": "59",
+									"value": "s"
+								},
+								{
+									"key": "60",
+									"value": "h"
+								},
+								{
+									"key": "61",
+									"value": "o"
+								},
+								{
+									"key": "62",
+									"value": "u"
+								},
+								{
+									"key": "63",
+									"value": "l"
+								},
+								{
+									"key": "64",
+									"value": "d"
+								},
+								{
+									"key": "65",
+									"value": "e"
+								},
+								{
+									"key": "66",
+									"value": "r"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/recipes/cuisine?apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recipes",
+								"cuisine"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Get Ingredient Substitutes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"test status\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+							"});\r",
+							"pm.test(\"test ingredient\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.ingredient).to.eql(\"butter\");\r",
+							"});\r",
+							"pm.test('Count object = ' + pm.response.json().substitutes.length, function () {\r",
+							"    pm.expect(pm.response.json().substitutes.length).to.equal(4);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Found 4 substitutes for the ingredient.\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/food/ingredients/substitutes?ingredientName=butter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"food",
+						"ingredients",
+						"substitutes"
+					],
+					"query": [
+						{
+							"key": "ingredientName",
+							"value": "butter",
+							"description": "(Required) The name of the ingredient you want to replace."
+						}
+					]
+				},
+				"description": "Search for substitutes for a given ingredient."
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/food/ingredients/substitutes?ingredientName=butter&apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"food",
+								"ingredients",
+								"substitutes"
+							],
+							"query": [
+								{
+									"key": "ingredientName",
+									"value": "butter"
+								},
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"ingredient\": \"butter\",\n \"substitutes\": [\n  \"1 cup = 7/8 cup shortening and 1/2 tsp salt\",\n  \"1 cup = 7/8 cup vegetable oil + 1/2 tsp salt\",\n  \"1/2 cup = 1/4 cup buttermilk + 1/4 cup unsweetened applesauce\",\n  \"1 cup = 1 cup margarine\"\n ],\n \"message\": \"Found 4 substitutes for the ingredient.\"\n}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/food/ingredients/substitutes?ingredientName=butter&apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"food",
+								"ingredients",
+								"substitutes"
+							],
+							"query": [
+								{
+									"key": "ingredientName",
+									"value": "butter"
+								},
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/food/ingredients/substitutes?ingredientName=butter&apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"food",
+								"ingredients",
+								"substitutes"
+							],
+							"query": [
+								{
+									"key": "ingredientName",
+									"value": "butter"
+								},
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/food/ingredients/substitutes?ingredientName=butter&apiKey=<API Key>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"food",
+								"ingredients",
+								"substitutes"
+							],
+							"query": [
+								{
+									"key": "ingredientName",
+									"value": "butter"
+								},
+								{
+									"key": "apiKey",
+									"value": "<API Key>"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{api-key-my}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "apiKey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.spoonacular.com",
+			"type": "string"
+		},
+		{
+			"key": "api-key-my",
+			"value": "82c9229354f849e78efe010d94150807",
+			"type": "string"
+		}
+	]
+}
