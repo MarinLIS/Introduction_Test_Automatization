@@ -1,4 +1,4 @@
-package ru.gb.homeworks.homework_04;
+package homeworks.homework_04;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
