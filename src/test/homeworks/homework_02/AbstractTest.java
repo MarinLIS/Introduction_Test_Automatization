@@ -1,4 +1,4 @@
-package ru.gb.homeworks.homework_02;
+package homeworks.homework_02;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
