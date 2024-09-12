@@ -1,4 +1,4 @@
-package ru.gb.homeworks.homework_02;
+package homeworks.homework_02;
 
 public class Main {
     public static void main(String[] args) {
