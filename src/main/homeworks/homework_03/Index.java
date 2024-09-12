@@ -1,5 +1,5 @@
 
-package ru.gb.homeworks.homework_03;
+package homeworks.homework_03;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
