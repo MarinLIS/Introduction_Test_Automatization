@@ -1,4 +1,4 @@
-Ознакомиться с документацией API проекта - Documentation;
+Ознакомиться с документацией API проекта - Documentation - AccuWeather — https://developer.accuweather.com/.;
 С помощью Postman коллекции выбрать 20 методов и покрыть их тестами.
 Перенести тесты в свой Maven проект с помощью библиотеки Rest Assured
 Запушить проект в GIT
