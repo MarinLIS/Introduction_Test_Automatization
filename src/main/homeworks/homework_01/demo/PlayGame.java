@@ -1,4 +1,4 @@
-package ru.gb.homeworks.homework_01.demo;
+package homeworks.homework_01.demo;
 
 
 import java.util.ArrayList;
