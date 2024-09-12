@@ -1,4 +1,4 @@
-package ru.gb.homeworks.homework_03;
+package homeworks.homework_03;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
